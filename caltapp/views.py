@@ -4,9 +4,9 @@ from django.http import HttpResponse
 def input(request):
     return render(request,'input.html')
 def calculate(request):
-    x=int(request.GET["t1"])
-    y=int(request.GET["t2"])
-    op_type=request.GET["op"]
+    x=int(request.POST["t1"])
+    y=int(request.POST["t2"])
+    op_type=request.POST["op"]
     z=0
     if op_type=="add":
         z=x+y
